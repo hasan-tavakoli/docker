@@ -12,6 +12,7 @@ RUN chmod +x initialize-container.sh
 RUN echo 'PS1="\[\e[32m\][\e[mMongoDB Kafka Connector Quick Start\e[32m]\e[m : "' >> ~/.bashrc
 
 # Add welcome text
+COPY data data
 COPY greeting.sh /
 RUN cat greeting.sh >> ~/.bashrc
 
