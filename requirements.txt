@@ -7,3 +7,4 @@ conda
 google
 protobuf
 google-cloud-translate
+google_auth_httplib2
