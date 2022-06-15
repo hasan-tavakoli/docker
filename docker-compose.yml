@@ -87,8 +87,8 @@ services:
         "-c",
         "sleep 10 && mongo --host mongodb://mongo1:27017 config-replica.js && sleep 10 && mongo --host mongodb://mongo1:27017 config-data.js",
       ]
+    command: "mongoimport --host mongo1 --db test --collection user --type json --file /user.json --jsonArray"
     restart: "no"
-
   shell:
     image: "quickstart-shell:1.0"
     container_name: shell
