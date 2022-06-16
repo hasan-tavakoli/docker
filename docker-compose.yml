@@ -231,8 +231,7 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-volumes:
-  postgres-db-volume:
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     hostname: zookeeper
@@ -336,7 +335,8 @@ volumes:
     networks:
       - localnet
     command: "tail -f /dev/null"
-
+volumes:
+  postgres-db-volume:
 networks:
   localnet:
     attachable: true
